@@ -10,11 +10,51 @@ int addierer(int i, int j)
 
 int main()
 {
-    int i = 2;
-    int j = 3;
+    struct TPerson
+    {
+        string name;
+        string nachname;
+        int alter;
 
-    cin >> i >> j;
-    cout << addierer(i, j) << endl;
+        bool istAltGenug()
+        {
+            if (alter >= 18)
+            {
+                return true;
+            }
+
+            return false;
+        };
+    };
+
+    TPerson luca;
+    luca.name = "Luca";
+    luca.nachname = "Kustes";
+    luca.alter = 17;
+
+    TPerson carlos = {"Carlos", "Foitin", 24};
+
+    TPerson leute[5];
+
+    leute[0] = luca;
+    leute[1] = carlos;
+    leute[2] = {"Benjamin", "Ohler", 29};
+
+    leute[3].name = "David";
+    leute[3].nachname = "Pitz";
+    leute[3].alter = 26;
+
+    leute[4] = {"Johannes", "Mund", 44};
+
+    int i = 0;
+    while (i < sizeof(leute))
+    {
+        if (leute[i].istAltGenug())
+        {
+            cout << "Prost" << leute[i].name << endl;
+        }
+        i++;
+    }
 
     return 0;
 }
