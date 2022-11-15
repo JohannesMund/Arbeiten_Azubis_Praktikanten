@@ -1,60 +1,31 @@
+#include "cazubi.h"
+#include "cperson.h"
+#include <algorithm>
 #include <iostream>
-
+#include <vector>
 using namespace std;
-
-int addierer(int i, int j)
-{
-    cout << i << " " << j << endl;
-    return i + j;
-}
 
 int main()
 {
-    struct TPerson
-    {
-        string name;
-        string nachname;
-        int alter;
+    CAzubi luca("Luca", "Kustes", 17);
+    CAzubi carlos("Carlos", "Foltin", 24);
+    CAzubi david("David", "Pitz", 26);
+    CAzubi benjamin("Benjamin", "Ohler", 29);
+    CAzubi daniel("Daniel", "Moll", 19);
 
-        bool istAltGenug()
-        {
-            if (alter >= 18)
-            {
-                return true;
-            }
+    luca.setSuperPower(CPerson::eGesangsTalent);
+    carlos.setSuperPower(CPerson::eHilfsBereitschaft);
+    david.setSuperPower(CPerson::eHilfsBereitschaft);
+    benjamin.setSuperPower(CPerson::eRaidSucht);
 
-            return false;
-        };
-    };
+    auto sp = luca.getSuperPower();
+    std::cout << CPerson::superPowerAsText(sp) << std::endl;
 
-    TPerson luca;
-    luca.name = "Luca";
-    luca.nachname = "Kustes";
-    luca.alter = 17;
-
-    TPerson carlos = {"Carlos", "Foitin", 24};
-
-    TPerson leute[5];
-
-    leute[0] = luca;
-    leute[1] = carlos;
-    leute[2] = {"Benjamin", "Ohler", 29};
-
-    leute[3].name = "David";
-    leute[3].nachname = "Pitz";
-    leute[3].alter = 26;
-
-    leute[4] = {"Johannes", "Mund", 44};
-
-    int i = 0;
-    while (i < sizeof(leute))
-    {
-        if (leute[i].istAltGenug())
-        {
-            cout << "Prost" << leute[i].name << endl;
-        }
-        i++;
-    }
+    luca.Ausgabe();
+    carlos.Ausgabe();
+    david.Ausgabe();
+    benjamin.Ausgabe();
+    daniel.Ausgabe();
 
     return 0;
 }
