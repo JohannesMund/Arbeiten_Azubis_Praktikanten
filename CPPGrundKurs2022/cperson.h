@@ -2,6 +2,10 @@
 
 #include <string>
 
+/**
+ * @brief CPerson Kapselt eine Person
+ */
+
 class CPerson
 {
 public:
@@ -18,7 +22,6 @@ public:
     ~CPerson();
 
     virtual void NenneDeinenNamen() = 0;
-
     virtual void Ausgabe();
 
     void setAlter(const int i);
