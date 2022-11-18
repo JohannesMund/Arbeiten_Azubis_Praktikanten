@@ -5,12 +5,13 @@
 class CPerson
 {
 public:
-    enum EFaehigkeiten
+    enum class EFaehigkeiten
     {
         eNichts,
         eGesangsTalent,
         eHilfsBereitschaft,
-        eRaidSucht
+        eRaidSucht,
+        eSparsamGucken
     };
 
     CPerson(const std::string name, const std::string nachname, const int alter);

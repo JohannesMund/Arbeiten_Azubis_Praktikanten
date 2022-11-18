@@ -8,7 +8,7 @@ CPerson::CPerson(const std::string name, const std::string nachname, const int a
     _name = name;
     _nachname = nachname;
     _alter = alter;
-    _superPower = eNichts;
+    _superPower = EFaehigkeiten::eNichts;
     cout << "Es macht plopp und " << _name << " erscheint aus dem Nichts" << endl;
 }
 
@@ -46,13 +46,15 @@ string CPerson::superPowerAsText(EFaehigkeiten e)
 {
     switch (e)
     {
-    case eGesangsTalent:
+    case EFaehigkeiten::eGesangsTalent:
         return "kann gut singen";
-    case eHilfsBereitschaft:
+    case EFaehigkeiten::eHilfsBereitschaft:
         return "hilft immer allen";
-    case eRaidSucht:
+    case EFaehigkeiten::eRaidSucht:
         return "zockt dauernd Pokemon-Raids";
-    case eNichts:
+    case EFaehigkeiten::eSparsamGucken:
+        return "guckt sparsam";
+    case EFaehigkeiten::eNichts:
     default:
         return "kann nix";
     }

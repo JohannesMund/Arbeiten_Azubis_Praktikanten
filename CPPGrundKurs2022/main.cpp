@@ -13,10 +13,10 @@ int main()
     CAzubi benjamin("Benjamin", "Ohler", 29);
     CAzubi daniel("Daniel", "Moll", 19);
 
-    luca.setSuperPower(CPerson::eGesangsTalent);
-    carlos.setSuperPower(CPerson::eHilfsBereitschaft);
-    david.setSuperPower(CPerson::eHilfsBereitschaft);
-    benjamin.setSuperPower(CPerson::eRaidSucht);
+    luca.setSuperPower(CPerson::EFaehigkeiten::eGesangsTalent);
+    carlos.setSuperPower(CPerson::EFaehigkeiten::eHilfsBereitschaft);
+    david.setSuperPower(CPerson::EFaehigkeiten::eHilfsBereitschaft);
+    benjamin.setSuperPower(CPerson::EFaehigkeiten::eRaidSucht);
 
     auto sp = luca.getSuperPower();
     std::cout << CPerson::superPowerAsText(sp) << std::endl;
