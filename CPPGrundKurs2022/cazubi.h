@@ -1,5 +1,4 @@
-#ifndef CAZUBI_H
-#define CAZUBI_H
+#pragma once
 
 #include "cperson.h"
 
@@ -11,5 +10,3 @@ public:
 
     void NenneDeinenNamen() override;
 };
-
-#endif // CAZUBI_H
