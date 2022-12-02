@@ -5,9 +5,11 @@ CONFIG -= qt
 
 SOURCES += \
         cazubi.cpp \
+        ccarlos.cpp \
         cperson.cpp \
         main.cpp
 
 HEADERS += \
     cazubi.h \
+    ccarlos.h \
     cperson.h

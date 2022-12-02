@@ -1,5 +1,7 @@
 #include "cazubi.h"
+#include "ccarlos.h"
 #include "cperson.h"
+
 #include <algorithm>
 #include <iostream>
 #include <vector>
@@ -12,6 +14,9 @@ int main()
     CAzubi david("David", "Pitz", 26);
     CAzubi benjamin("Benjamin", "Ohler", 29);
     CAzubi daniel("Daniel", "Moll", 19);
+
+    CCarlos c;
+    c.NenneDeinenNamen();
 
     luca.setSuperPower(CPerson::EFaehigkeiten::eGesangsTalent);
     carlos.setSuperPower(CPerson::EFaehigkeiten::eHilfsBereitschaft);
